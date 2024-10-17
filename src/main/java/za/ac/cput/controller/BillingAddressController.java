@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/billing_address")
+@CrossOrigin(origins = "http://localhost:3000")
 public class BillingAddressController {
 
     private BillingAddressService billingAddressService;
@@ -52,5 +53,7 @@ public class BillingAddressController {
 
     @GetMapping("/getall")
     public List<BillingAddress> getall(){return billingAddressService.getallBillingAddress();}
+
+
 
 }

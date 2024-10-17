@@ -51,7 +51,7 @@ class AddressServiceTest {
     @BeforeAll
     static void setUp() {
 //        shippingAddress_in = ShippingAddressFactory.buildShippingAddress(LocalTime.of(18, 0, 0), "109 Kloof Street", "Gardens", "8000", "Cape Town");
-        billingAddress_in = BillingAddressFactory.buildBillingAddress("EFT", "1 Gore Street", "Parade", "8000", "Cape Town");
+        billingAddress_in = BillingAddressFactory.buildBillingAddress("EFT", "2 Gore Street", "Parade", "8000", "Cape Town");
 
     }
 
