@@ -1,6 +1,7 @@
 package za.ac.cput.service.customerService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Author;
 import za.ac.cput.domain.Contact;
@@ -12,12 +13,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CustomerService implements ICustomerService{
+public class CustomerService implements ICustomerService {
     @Autowired
     private CustomerRepository repository;
     @Autowired
     private ContactService contactService;
-
+    UserDetails user;
 
     @Override
     public Customer create(Customer customer) {
@@ -74,5 +75,10 @@ public class CustomerService implements ICustomerService{
     public  Customer getCustomerByEmail(String email){
         return repository.findByContact_Email(email);
 
+    }
+
+    // Testing purposes
+    public UserDetails loadUserByUsername (String email){
+        return (UserDetails) repository.findByContact_Email(email);
     }
 }
