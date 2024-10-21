@@ -7,8 +7,9 @@ import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.OneToOne;
 //
 
-//Role Entity
-//
+/*Role Entity
+This should become an interface
+*/
 
 
 @MappedSuperclass
